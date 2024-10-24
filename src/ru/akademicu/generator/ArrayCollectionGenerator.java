@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class ArrayCollectionGenerator {
-    private final Appointment[] appointments = new Appointment[10];
+    private final Appointment[] appointments = new Appointment[11];
     private final ArrayList<Appointment> appointmentsList = new ArrayList<>();
     private final Random rand = new Random();
 

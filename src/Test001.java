@@ -12,7 +12,7 @@ public class Test001 {
     public static void main(String[] args) {
         String name1 = "Ion";
         String purpose1 = "Because";
-        Date date1 = new Date(2024,12,29);
+        Date date1 = new Date(2003,2,29);
         Time time1 = new Time(12,59);
         MeetingRoom room1 = new MeetingRoom("A3-04");
 

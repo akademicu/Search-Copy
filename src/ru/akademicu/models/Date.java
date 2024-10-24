@@ -30,10 +30,12 @@ public class Date implements Cloneable {
             this.year = year;
             this.month = month;
             this.day = day;
+            System.out.println(localDate);
         }catch (Exception e){
             this.year = -1;
             this.month = -1;
             this.day = -1;
+            System.out.println(e.getMessage());
         }
     }
 
@@ -52,7 +54,12 @@ public class Date implements Cloneable {
     }
 
     public void setYear(int year) {
-        this.year = year;
+        try {
+            LocalDate localDate = LocalDate.of(year, this.month, this.day);
+            this.year = year;
+        }catch (Exception e){
+            this.year = -1;
+        }
     }
 
     public int getMonth() {
@@ -60,7 +67,12 @@ public class Date implements Cloneable {
     }
 
     public void setMonth(int month) {
-        this.month = month;
+        try {
+            LocalDate localDate = LocalDate.of(this.year, month, this.day);
+            this.month = month;
+        }catch (Exception e){
+            this.month = -1;
+        }
     }
 
     public int getDay() {
@@ -68,7 +80,12 @@ public class Date implements Cloneable {
     }
 
     public void setDay(int day) {
-        this.day = day;
+        try {
+            LocalDate localDate = LocalDate.of(this.year, this.month, day);
+            this.day = day;
+        }catch (Exception e){
+            this.day = -1;
+        }
     }
 
     @Override

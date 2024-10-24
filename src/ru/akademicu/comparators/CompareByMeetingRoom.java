@@ -10,7 +10,6 @@ public class CompareByMeetingRoom implements Comparator<Appointment> {
         String room1ForCompare = changeRoomFormat(ap1.getRoom().getRoom());
 
         String room2ForCompare = changeRoomFormat(ap2.getRoom().getRoom());
-        System.out.println(room2ForCompare);
 
         return room1ForCompare.compareTo(room2ForCompare);
     }
