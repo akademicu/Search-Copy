@@ -32,8 +32,8 @@ public class Time implements Cloneable {
             this.hour = hour;
             this.minute = minute;
         }else {
-            this.hour = -1;
-            this.minute = -1;
+            this.hour = LocalDateTime.now().getHour();
+            this.minute = LocalDateTime.now().getMinute();
         }
     }
 
@@ -52,7 +52,7 @@ public class Time implements Cloneable {
      */
     public void setHour(int hour) {
         if (hour < 0 || hour > 23) {
-            this.hour = -1;
+            this.hour = LocalDateTime.now().getHour();
         }else {
             this.hour = hour;
         }
@@ -68,7 +68,7 @@ public class Time implements Cloneable {
      */
     public void setMinute(int minute) {
         if (minute < 0 || minute > 59) {
-            this.minute = -1;
+            this.minute = LocalDateTime.now().getMinute();
         }else {
             this.minute = minute;
         }

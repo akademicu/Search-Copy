@@ -13,7 +13,7 @@ public class Test001 {
         String name1 = "Ion";
         String purpose1 = "Because";
         Date date1 = new Date(2003,2,29);
-        Time time1 = new Time(12,59);
+        Time time1 = new Time(12,60);
         MeetingRoom room1 = new MeetingRoom("A3-04");
 
         System.out.println("\t***Arguments for appointment ap***");

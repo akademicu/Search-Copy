@@ -25,16 +25,16 @@ public class Date implements Cloneable {
      * @param day
      */
     public Date(int year, int month, int day) {
+        LocalDate localDate = LocalDate.now();
         try {
-            LocalDate localDate = LocalDate.of(year, month, day);
+            localDate = LocalDate.of(year, month, day);
             this.year = year;
             this.month = month;
             this.day = day;
-            System.out.println(localDate);
         }catch (Exception e){
-            this.year = -1;
-            this.month = -1;
-            this.day = -1;
+            this.year = localDate.getYear();
+            this.month = localDate.getMonthValue();
+            this.day = localDate.getDayOfMonth();
             System.out.println(e.getMessage());
         }
     }
@@ -54,11 +54,15 @@ public class Date implements Cloneable {
     }
 
     public void setYear(int year) {
+        LocalDate localDate = LocalDate.now();
         try {
-            LocalDate localDate = LocalDate.of(year, this.month, this.day);
+            localDate = LocalDate.of(year, this.month, this.day);
             this.year = year;
         }catch (Exception e){
-            this.year = -1;
+            this.year = localDate.getYear();
+            this.month = localDate.getMonthValue();
+            this.day = localDate.getDayOfMonth();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -67,11 +71,15 @@ public class Date implements Cloneable {
     }
 
     public void setMonth(int month) {
+        LocalDate localDate = LocalDate.now();
         try {
-            LocalDate localDate = LocalDate.of(this.year, month, this.day);
+            localDate = LocalDate.of(this.year, month, this.day);
             this.month = month;
         }catch (Exception e){
-            this.month = -1;
+            this.year = localDate.getYear();
+            this.month = localDate.getMonthValue();
+            this.day = localDate.getDayOfMonth();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -80,11 +88,15 @@ public class Date implements Cloneable {
     }
 
     public void setDay(int day) {
+        LocalDate localDate = LocalDate.now();
         try {
-            LocalDate localDate = LocalDate.of(this.year, this.month, day);
+            localDate = LocalDate.of(this.year, this.month, day);
             this.day = day;
         }catch (Exception e){
-            this.day = -1;
+            this.year = localDate.getYear();
+            this.month = localDate.getMonthValue();
+            this.day = localDate.getDayOfMonth();
+            System.out.println(e.getMessage());
         }
     }
 

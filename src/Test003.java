@@ -21,7 +21,7 @@ public class Test003 {
         ArrayList<Appointment> apArrayList = arrayCollectionGenerator.getAppointmentsList();
         Appointment[] apArray = arrayCollectionGenerator.getAppointments();
         Appointment searchAppointment = new Appointment("Ion", "Java",
-                new Date(1983,2,5),
+                new Date(2023,2,29),
                 new Time(5,25),
                 new MeetingRoom("C2-22"));
         apArrayList.add(searchAppointment);
